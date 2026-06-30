@@ -16,8 +16,10 @@ function figmaAssetResolver() {
   }
 }
 
-export default defineConfig({
-  base: '/3D-Card-Render-2/',
+export default defineConfig(({ command }) => ({
+  // Use the repo sub-path only for production builds (GitHub Pages).
+  // During `vite` dev server, base stays '/' so assets resolve correctly.
+  base: command === 'build' ? '/3D-Credit-Card-Plugin_Aditee/' : '/',
   build: { outDir: 'docs' },
   plugins: [
     figmaAssetResolver(),
@@ -35,4 +37,4 @@ export default defineConfig({
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
-})
+}))
