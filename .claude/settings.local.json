@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(grep -n \"exportDropdownRef\\\\|showExportDropdown\" /Users/F1865/Desktop/3D Credit Card Plugin_Aditee/src/app/App.tsx | head -15)",
+      "Read(//Users/F1865/Desktop/**)"
+    ]
+  }
+}
